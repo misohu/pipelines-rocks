@@ -13,7 +13,9 @@ jobs:
     uses: canonical/charmed-kubeflow-workflows/.github/workflows/get-rocks-modified-and-build-scan-test-publish.yaml@KF-7611-rocks-integration-ci
     permissions:
       pull-requests: read
-    secrets: inherit
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
     with:
       microk8s-channel: 1.32-strict/stable
       juju-channel: 3.6/stable

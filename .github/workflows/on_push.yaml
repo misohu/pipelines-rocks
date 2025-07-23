@@ -10,7 +10,7 @@ jobs:
 
   on-push:
     name: Get rocks modified and build-scan-test-publish them
-    uses: canonical/charmed-kubeflow-workflows/.github/workflows/get-rocks-modified-and-build-scan-test-publish.yaml@main
+    uses: misohu/charmed-kubeflow-workflows/.github/workflows/get-rocks-modified-and-build-scan-test-publish.yaml@KF-7611-rocks-integration-ci
     permissions:
       pull-requests: read
     secrets: inherit
@@ -18,3 +18,4 @@ jobs:
       microk8s-channel: 1.32-strict/stable
       juju-channel: 3.6/stable
       python-version: "3.8"
+
